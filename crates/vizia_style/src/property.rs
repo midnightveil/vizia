@@ -2,10 +2,11 @@ use crate::{
     define_property, Angle, BackgroundImage, BackgroundSize, BlendMode, Border, BorderStyle,
     BorderWidth, ClipPath, Color, CornerRadius, CornerShape, CursorIcon, CustomParseError,
     CustomProperty, Display, Filter, FontFamily, FontSize, FontSlant, FontVariation, FontWeight,
-    FontWidth, LayoutType, LengthOrPercentage, LineClamp, LineHeight, Opacity, Outline, Overflow,
-    Parse, PointerEvents, Position, PositionType, Rect, Scale, Shadow, Spacing, TextAlign,
-    TextDecoration, TextDecorationLine, TextDecorationStyle, TextOverflow, TextShadow, TextStroke,
-    TextStrokeStyle, Transform, Transition, Translate, Units, UnparsedProperty, Visibility,
+    FontWidth, LayoutType, Length, LengthOrPercentage, LineClamp, LineHeight, Opacity, Outline,
+    Overflow, Parse, PointerEvents, Position, PositionType, Rect, Scale, Shadow, Spacing,
+    TextAlign, TextDecoration, TextDecorationLine, TextDecorationStyle, TextOverflow, TextShadow,
+    TextStroke, TextStrokeStyle, Transform, Transition, Translate, Units, UnparsedProperty,
+    Visibility,
 };
 use cssparser::Parser;
 
