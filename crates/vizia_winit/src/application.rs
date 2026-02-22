@@ -209,6 +209,13 @@ impl Application {
         self
     }
 
+    /// A scale factor applied on top of any DPI scaling, defaults to 1.0.
+    pub fn user_scale_factor(mut self, factor: f64) -> Self {
+        self.window_description.user_scale_factor = factor;
+
+        self
+    }
+
     pub fn should_poll(mut self) -> Self {
         self.control_flow = ControlFlow::Poll;
 
@@ -500,7 +507,7 @@ impl ApplicationHandler<UserEvent> for Application {
                 scale_factor,
                 inner_size_writer: _,
             } => {
-                self.cx.set_scale_factor(scale_factor);
+                self.cx.set_scale_factor(scale_factor * self.window_description.user_scale_factor);
                 self.cx.needs_refresh(window.entity);
             }
             winit::event::WindowEvent::ThemeChanged(theme) => {
